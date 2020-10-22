@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpaceInvadersApp.Model
 {
-    class AllianShip : GameObject
+    class PlayerShipMissile : GameObject
     {
     }
 }

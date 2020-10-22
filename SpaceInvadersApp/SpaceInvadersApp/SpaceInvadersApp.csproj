@@ -43,12 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\AllianShip.cs" />
+    <Compile Include="Model\AlienShip.cs" />
     <Compile Include="Model\GameObject.cs" />
     <Compile Include="Model\GameObjectPlace.cs" />
     <Compile Include="Model\GameObjectType.cs" />
+    <Compile Include="Model\GameSettings.cs" />
     <Compile Include="Model\GroundObject.cs" />
     <Compile Include="Model\PlayerShip.cs" />
+    <Compile Include="Model\PlayerShipMissile.cs" />
+    <Compile Include="Model\Scene.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

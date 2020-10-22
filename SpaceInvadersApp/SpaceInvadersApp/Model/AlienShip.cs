@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpaceInvadersApp.Model
 {
-    enum GameObjectType
+    class AlienShip : GameObject
     {
-        AlienShip = 1,
-        PlayerShip = 2,
-        PlayerShipMissile = 3,
-        GroudObject = 4
     }
 }
