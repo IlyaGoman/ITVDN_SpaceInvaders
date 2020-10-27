@@ -11,7 +11,7 @@ namespace SpaceInvadersApp.Model
     {
         List<GameObject> _swarm;
         List<GameObject> _groud;
-        List<GameObject> _playerShip;
+        GameObject _playerShip;
         List<GameObject> _playerShipMissile;
 
         GameSettings _gameSettings;
@@ -24,6 +24,8 @@ namespace SpaceInvadersApp.Model
         {
             _gameSettings = gameSettings;
             _swarm = new AlienShipFactory(_gameSettings).GetSwarm();
+            _groud = new GroundFactory(_gameSettings).GetGround();
+
         }
 
         public static Scene GetScene(GameSettings gameSettings)

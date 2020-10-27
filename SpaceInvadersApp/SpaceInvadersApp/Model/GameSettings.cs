@@ -96,6 +96,8 @@ namespace SpaceInvadersApp.Model
         /// Число рядов земли
         /// </summary>
         public int NumberOfGroundRows { get; set; } = 1;
+
+        public int NumberOfGroundColls { get; set; } = 60;
         #endregion
     }
 }

@@ -24,23 +24,23 @@ namespace SpaceInvadersApp.Factories
 
         public List<GameObject> GetGround()
         {
-            List<GameObject> swarm = new List<GameObject>();
+            List<GameObject> ground = new List<GameObject>();
 
             int startX = GameSettings.GroundStartXCoordinate;
             int startY = GameSettings.GroundStartYCoordinate;
 
             for (int y = 0; y < GameSettings.NumberOfGroundRows; y++)
             {
-                for (int x = 0; x < GameSettings.gr; x++)
+                for (int x = 0; x < GameSettings.NumberOfGroundColls; x++)
                 {
                     GameObjectPlace gameObjectPlace = new GameObjectPlace() { XCoordinate = startX + x, YCoordinate = startY + y };
-                    GameObject alienShip = GetGameObject(gameObjectPlace);
+                    GameObject groundObject = GetGameObject(gameObjectPlace);
 
-                    swarm.Add(alienShip);
+                    ground.Add(groundObject);
                 }
             }
 
-            return swarm;
+            return ground;
         }
     }
 }

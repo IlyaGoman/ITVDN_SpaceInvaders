@@ -46,6 +46,7 @@
     <Compile Include="Factories\AlienShipFactory.cs" />
     <Compile Include="Factories\GameObjectFactory.cs" />
     <Compile Include="Factories\GroundFactory.cs" />
+    <Compile Include="Factories\PlayerShipFactory.cs" />
     <Compile Include="Model\AlienShip.cs" />
     <Compile Include="Model\GameObject.cs" />
     <Compile Include="Model\GameObjectPlace.cs" />
