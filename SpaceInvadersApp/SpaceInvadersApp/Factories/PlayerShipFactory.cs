@@ -17,7 +17,7 @@ namespace SpaceInvadersApp.Factories
 
         public override GameObject GetGameObject(GameObjectPlace gameObjectPlace)
         {
-            GameObject playerObject = new GroundObject() { Figure = GameSettings.PlayerShip, GameObjectPlace = gameObjectPlace, GameObjectType = GameObjectType.PlayerShip };
+            GameObject playerObject = new PlayerShip() { Figure = GameSettings.PlayerShip, GameObjectPlace = gameObjectPlace, GameObjectType = GameObjectType.PlayerShip };
 
             return playerObject;
         }
