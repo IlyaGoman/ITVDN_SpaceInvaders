@@ -35,11 +35,12 @@ namespace SpaceInvadersApp.Controllers
 
         public void Render(Scene scene)
         {
+            ClearScreen();
             ResetPosition();
 
             AddListForRendering(scene.swarm);
             AddListForRendering(scene.groud);
-            //AddListForRendering(scene.playerShipMissile);
+            AddListForRendering(scene.playerShipMissile);
 
             AddGameObjectForRendering(scene.playerShip);
 
@@ -56,9 +57,8 @@ namespace SpaceInvadersApp.Controllers
             }
 
             Console.WriteLine(stringBuilder.ToString());
-            
-            ResetPosition();
 
+            ResetPosition();
         }
 
         /// <summary>
@@ -92,18 +92,21 @@ namespace SpaceInvadersApp.Controllers
 
         public void ClearScreen()
         {
-            StringBuilder stringBuilder = new StringBuilder();
-
             for (int y = 0; y < _screenHeight; y++)
             {
                 for (int x = 0; x < _screenWidth; x++)
                 {
                     _screenMatrix[y, x] = ' ';
-                    stringBuilder.Append(' ');
                 }
-
-                stringBuilder.Append(Environment.NewLine);
             }
+        }
+
+        public void RenderGameOver()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("GAME OVER");
 
             Console.WriteLine(stringBuilder.ToString());
         }

@@ -11,6 +11,8 @@ namespace SpaceInvadersApp.Controllers
         public event EventHandler OnAPressed;
         public event EventHandler OnDPressed;
 
+        public event EventHandler OnSpacePressed;
+
         public void StartListening()
         {
             while(true)
@@ -24,6 +26,10 @@ namespace SpaceInvadersApp.Controllers
                 else if (key.Key.Equals(ConsoleKey.D))
                 {
                     OnDPressed?.Invoke(this, new EventArgs());
+                }
+                else if (key.Key.Equals(ConsoleKey.Spacebar))
+                {
+                    OnSpacePressed?.Invoke(this, new EventArgs());
                 }
                 else
                 {

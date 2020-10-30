@@ -34,8 +34,12 @@ namespace SpaceInvadersApp
             uIController.OnAPressed += (obj, arg) => gameEngine.CalculateMovePlaterShipLeft();
             uIController.OnDPressed += (obj, arg) => gameEngine.CalculateMovePlaterShipRight();
 
+            uIController.OnSpacePressed += (obj, arg) => gameEngine.Shot();
+
             Thread uIThread = new Thread(uIController.StartListening);
             uIThread.Start();
+
+            Thread.CurrentThread.Priority = ThreadPriority.AboveNormal;
         }
     }
 }
