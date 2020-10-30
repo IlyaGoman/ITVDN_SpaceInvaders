@@ -17,7 +17,7 @@ namespace SpaceInvadersApp.Model
         /// <summary>
         /// Высота игрового поля
         /// </summary>
-        public int ConsoleHeight { get; set; } = 30;
+        public int ConsoleHeight { get; set; } = 50;
 
         public int GameSpeed { get; set; } = 100;
         #endregion
@@ -83,7 +83,7 @@ namespace SpaceInvadersApp.Model
 
 
         #region GroundInfo
-        public int GroundStartXCoordinate { get; set; } = 1;
+        public int GroundStartXCoordinate { get; set; } = 10;
 
         public int GroundStartYCoordinate { get; set; } = 20;
 

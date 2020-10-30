@@ -26,6 +26,7 @@ namespace SpaceInvadersApp.Model
             swarm = new AlienShipFactory(_gameSettings).GetSwarm();
             groud = new GroundFactory(_gameSettings).GetGround();
             playerShip = new PlayerShipFactory(_gameSettings).GetPlayerShip();
+            playerShipMissile = new List<GameObject>();
 
         }
 

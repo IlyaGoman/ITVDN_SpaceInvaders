@@ -17,8 +17,8 @@ namespace SpaceInvadersApp.Logic
 
         public SceneRender(GameSettings gameSettings)
         {
-            _screenWidth = gameSettings.ConsoleWidth + 1;
-            _screenHeight = gameSettings.ConsoleHeight + 1;
+            _screenWidth = gameSettings.ConsoleWidth ;
+            _screenHeight = gameSettings.ConsoleHeight ;
             _screenMatrix = new char[gameSettings.ConsoleHeight, gameSettings.ConsoleWidth];
 
             Console.WindowHeight = gameSettings.ConsoleHeight;
@@ -39,7 +39,7 @@ namespace SpaceInvadersApp.Logic
 
             AddListForRendering(scene.swarm);
             AddListForRendering(scene.groud);
-            AddListForRendering(scene.playerShipMissile);
+            //AddListForRendering(scene.playerShipMissile);
 
             AddGameObjectForRendering(scene.playerShip);
 
@@ -88,6 +88,23 @@ namespace SpaceInvadersApp.Logic
             {
                 AddGameObjectForRendering(gameObject);
             }
+        }
+
+        public void ClearScreen()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+
+            for (int y = 0; y < _screenHeight; y++)
+            {
+                for (int x = 0; x < _screenWidth; x++)
+                {
+                    stringBuilder.Append(' ');
+                }
+
+                stringBuilder.Append(Environment.NewLine);
+            }
+
+            Console.WriteLine(stringBuilder.ToString());
         }
     }
 }
