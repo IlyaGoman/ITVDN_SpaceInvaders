@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SpaceInvadersApp.Logic
+namespace SpaceInvadersApp.Controllers
 {
     class GameEngine
     {

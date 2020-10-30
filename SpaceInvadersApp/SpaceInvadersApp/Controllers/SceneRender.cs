@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpaceInvadersApp.Logic
+namespace SpaceInvadersApp.Controllers
 {
     class SceneRender
     {
@@ -98,6 +98,7 @@ namespace SpaceInvadersApp.Logic
             {
                 for (int x = 0; x < _screenWidth; x++)
                 {
+                    _screenMatrix[y, x] = ' ';
                     stringBuilder.Append(' ');
                 }
 
